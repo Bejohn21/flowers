@@ -21,11 +21,12 @@ body {
 }
 
 .message-container {
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 20px;  /* Adjust this for spacing between the text and flowers */
-    font-family: 'Arial', sans-serif; 
+    animation: fadeIn 3s ease-out;
 }
 
 .message {
