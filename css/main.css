@@ -12,25 +12,27 @@
 
 body {
   display: flex;
-  align-items: flex-end;
+  align-items: center; /* Change from flex-end to center */
   justify-content: center;
   min-height: 100vh;
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
+  position: relative; /* Add relative positioning */
 }
 
 .message-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    animation: fadeIn 3s ease-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: fadeIn 3s ease-out;
+  z-index: 10; /* Ensure it's above other elements */
 }
 
 .message {
-  font-size: 3em;
+  font-size: 1.5em; /* Adjusted size */
   color: #FF69B4; /* Pink color */
   font-family: 'Arial', sans-serif;
   font-weight: bold;
@@ -59,6 +61,7 @@ body {
       transform: translateY(0);
   }
 }
+
 
 
 .night {
